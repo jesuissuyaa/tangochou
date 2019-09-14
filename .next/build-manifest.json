@@ -12,11 +12,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/text/[id]": [
+    "/add-text": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/vocab": [
+    "/text/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

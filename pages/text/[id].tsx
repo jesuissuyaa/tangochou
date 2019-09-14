@@ -69,11 +69,10 @@ class Text extends React.Component<Props, State> {
     // split string if concatenated
     if (str.includes('’')) {
       str = str.split('’')[1];
-    } else if (this.state.wordInVocab.includes("'")) {
+    } else if (str.includes("'")) {
       str = str.split("'")[1];
     }
     // lowercase
-    console.log(str);
     return str.toLowerCase();
   };
   handleWordClick = async (event: React.MouseEvent) => {
@@ -110,7 +109,6 @@ class Text extends React.Component<Props, State> {
         `http://localhost:3000/api/collins/${this.state.wordInVocab}`,
       );
       data = await response.json();
-      //console.log(data);
     }
     // display definitions
     const spanStyle: React.CSSProperties = { marginRight: '1rem' };

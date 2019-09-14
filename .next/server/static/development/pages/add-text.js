@@ -88,10 +88,87 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/Button.tsx":
+/*!*******************************!*\
+  !*** ./components/Button.tsx ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/kashi-lab/github/tangochou/components/Button.tsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
+
+
+const Button = props => __jsx("button", {
+  onClick: props.clickhandler,
+  className: "jsx-113404155",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}, props.children, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  id: "113404155",
+  __self: undefined
+}, "button.jsx-113404155{background-color:#230903;border:none;color:#fff;font-family:'Hepta Slab',serif;font-size:0.8rem;font-weight:bold;padding:0.3rem 0.5rem;text-transform:uppercase;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rYXNoaS1sYWIvZ2l0aHViL3RhbmdvY2hvdS9jb21wb25lbnRzL0J1dHRvbi50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBU2dCLEFBR2tDLHlCQUNiLFlBQ0QsV0FDcUIsK0JBQ2YsaUJBQ0EsaUJBQ0ssc0JBQ0cseUJBQzNCIiwiZmlsZSI6Ii9Vc2Vycy9rYXNoaS1sYWIvZ2l0aHViL3RhbmdvY2hvdS9jb21wb25lbnRzL0J1dHRvbi50c3giLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5cbmludGVyZmFjZSBQcm9wcyB7XG4gIC8vIHRleHQ6IHN0cmluZztcbiAgY2xpY2toYW5kbGVyOiAoZTogUmVhY3QuTW91c2VFdmVudCkgPT4gdm9pZDtcbn1cbmNvbnN0IEJ1dHRvbjogUmVhY3QuRkM8UHJvcHM+ID0gcHJvcHMgPT4gKFxuICA8YnV0dG9uIG9uQ2xpY2s9e3Byb3BzLmNsaWNraGFuZGxlcn0+XG4gICAge3Byb3BzLmNoaWxkcmVufVxuICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgIGJ1dHRvbiB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMyMzA5MDM7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIGZvbnQtZmFtaWx5OiAnSGVwdGEgU2xhYicsIHNlcmlmO1xuICAgICAgICBmb250LXNpemU6IDAuOHJlbTtcbiAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgIHBhZGRpbmc6IDAuM3JlbSAwLjVyZW07XG4gICAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gICAgICB9XG4gICAgYH08L3N0eWxlPlxuICA8L2J1dHRvbj5cbik7XG5cbmV4cG9ydCBkZWZhdWx0IEJ1dHRvbjtcbiJdfQ== */\n/*@ sourceURL=/Users/kashi-lab/github/tangochou/components/Button.tsx */"));
+
+/* harmony default export */ __webpack_exports__["default"] = (Button);
+
+/***/ }),
+
+/***/ "./components/InputText.tsx":
+/*!**********************************!*\
+  !*** ./components/InputText.tsx ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/kashi-lab/github/tangochou/components/InputText.tsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
+
+
+const InputText = () => __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}, __jsx("input", {
+  type: "text",
+  ref: react__WEBPACK_IMPORTED_MODULE_1__["createRef"](),
+  className: "jsx-1955128134",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  id: "1955128134",
+  __self: undefined
+}, "input.jsx-1955128134{border:1px solid #304a65;height:1.2rem;margin:0 1rem;}input.jsx-1955128134:focus{outline:none;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rYXNoaS1sYWIvZ2l0aHViL3RhbmdvY2hvdS9jb21wb25lbnRzL0lucHV0VGV4dC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBUWdCLEFBR2tDLEFBTVosYUFDZixZQU5nQixjQUNBLGNBQ2hCIiwiZmlsZSI6Ii9Vc2Vycy9rYXNoaS1sYWIvZ2l0aHViL3RhbmdvY2hvdS9jb21wb25lbnRzL0lucHV0VGV4dC50c3giLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5cbmludGVyZmFjZSBQcm9wcyB7XG4gIG15UmVmOiBSZWFjdC5SZWZPYmplY3Q8SFRNTElucHV0RWxlbWVudD47XG59XG5jb25zdCBJbnB1dFRleHQ6IFJlYWN0LkZDPHt9PiA9ICgpID0+IChcbiAgPFJlYWN0LkZyYWdtZW50PlxuICAgIDxpbnB1dCB0eXBlPVwidGV4dFwiIHJlZj17UmVhY3QuY3JlYXRlUmVmKCl9IC8+XG4gICAgPHN0eWxlIGpzeD57YFxuICAgICAgaW5wdXQge1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjMzA0YTY1O1xuICAgICAgICBoZWlnaHQ6IDEuMnJlbTtcbiAgICAgICAgbWFyZ2luOiAwIDFyZW07XG4gICAgICB9XG5cbiAgICAgIGlucHV0OmZvY3VzIHtcbiAgICAgICAgb3V0bGluZTogbm9uZTtcbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gIDwvUmVhY3QuRnJhZ21lbnQ+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBJbnB1dFRleHQ7XG4iXX0= */\n/*@ sourceURL=/Users/kashi-lab/github/tangochou/components/InputText.tsx */"));
+
+/* harmony default export */ __webpack_exports__["default"] = (InputText);
+
+/***/ }),
 
 /***/ "./components/Layout.tsx":
 /*!*******************************!*\
@@ -348,6 +425,17 @@ class Texts extends react__WEBPACK_IMPORTED_MODULE_2___default.a.PureComponent {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Texts);
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "core-js/library/fn/json/stringify");
 
 /***/ }),
 
@@ -1046,156 +1134,161 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/vocab.tsx":
-/*!*************************!*\
-  !*** ./pages/vocab.tsx ***!
-  \*************************/
+/***/ "./pages/add-text.tsx":
+/*!****************************!*\
+  !*** ./pages/add-text.tsx ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
-/* harmony import */ var _utils_strUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/strUtils */ "./utils/strUtils.tsx");
+/* harmony import */ var _components_InputText__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/InputText */ "./components/InputText.tsx");
+/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Button */ "./components/Button.tsx");
+/* harmony import */ var _utils_strUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/strUtils */ "./utils/strUtils.tsx");
 
-var _jsxFileName = "/Users/kashi-lab/github/tangochou/pages/vocab.tsx";
+var _jsxFileName = "/Users/kashi-lab/github/tangochou/pages/add-text.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2__["createElement"];
 
 
- // import fetch from 'isomorphic-unfetch';
 
-const initWordState = {
-  words: [{
-    id: 1,
-    word: 'falloir',
-    definition: ['to need', 'have to']
-  }, {
-    id: 2,
-    word: 'valoir',
-    definition: ['be worth']
-  }, {
-    id: 3,
-    word: 'faire',
-    definition: ['to do', 'to make']
-  }]
-};
 
-const createWordList = dict => {
-  const res = [];
-  let l = 65;
-  let _w = 0;
 
-  while (l < 65 + 26
-  /* && _w < dict.length*/
-  ) {
-    const letter = String.fromCharCode(l);
-    let w = _w; // insert heading letter
 
-    res.push(__jsx(Heading, {
-      key: l,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 48
-      },
-      __self: undefined
-    }, letter));
-    const list = [];
-    let key = 1;
+const handleWordClick = event => console.log(event.target.innerHTML);
 
-    while (w < dict.length && dict[w].word[0].toUpperCase() == letter) {
-      list.push(__jsx("li", {
-        key: key,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        },
-        __self: undefined
-      }, Object(_utils_strUtils__WEBPACK_IMPORTED_MODULE_4__["unescape"])(dict[w].word), __jsx("div", {
-        key: key++,
-        style: {
-          marginLeft: '1rem',
-          fontSize: '0.8rem'
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 56
-        },
-        __self: undefined
-      }, dict[w++].definition.join(', '))));
-    }
+const getText = event => {
+  event.preventDefault();
+  const title = document.getElementsByTagName('input')[0].value;
+  const desc = document.getElementsByTagName('input')[1].value;
+  let text = document.getElementsByTagName('textarea')[0].value; // escape chars
 
-    res.push(__jsx("ul", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62
-      },
-      __self: undefined
-    }, list));
-    _w = w;
-    l++;
-  }
+  text = Object(_utils_strUtils__WEBPACK_IMPORTED_MODULE_6__["escape"])(text); // add to database
 
-  _w = 0;
-  return res;
-};
+  fetch('http://localhost:3001/texts', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
+      title: title,
+      desc: desc,
+      text: text,
+      wordlist: []
+    })
+  }).then(() => {
+    document.getElementById('db-res').innerText = `added ${title} to DB`;
+  });
+  const res = {
+    title: title,
+    desc: desc,
+    text: text
+  };
+  const textArray = text.split(' ');
+}; // const vdoms = ['the', 'quick', 'brown', 'fox'].map((w, i) => (
+//   <span key={i} onClick={handleWordClick}>
+//     {w}
+//   </span>
+// ));
 
-const Heading = props => __jsx("p", {
-  className: "jsx-1163175343",
+
+const AddText = () => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 71
+    lineNumber: 49
   },
   __self: undefined
-}, props.children, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  id: "1163175343",
+}, __jsx("div", {
+  className: "jsx-2396091119",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 54
+  },
   __self: undefined
-}, "p.jsx-1163175343{font-size:1.5rem;font-weight:bold;margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rYXNoaS1sYWIvZ2l0aHViL3RhbmdvY2hvdS9wYWdlcy92b2NhYi50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBd0VnQixBQUcwQixpQkFDQSxpQkFDUixTQUNYIiwiZmlsZSI6Ii9Vc2Vycy9rYXNoaS1sYWIvZ2l0aHViL3RhbmdvY2hvdS9wYWdlcy92b2NhYi50c3giLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgTGF5b3V0IGZyb20gJy4uL2NvbXBvbmVudHMvTGF5b3V0JztcbmltcG9ydCB7IHVuZXNjYXBlIH0gZnJvbSAnLi4vdXRpbHMvc3RyVXRpbHMnO1xuLy8gaW1wb3J0IGZldGNoIGZyb20gJ2lzb21vcnBoaWMtdW5mZXRjaCc7XG5pbnRlcmZhY2UgUHJvcHMge1xuICBrZXk6IG51bWJlcjtcbn1cblxuaW50ZXJmYWNlIFdvcmRTdGF0ZSB7XG4gIHdvcmRzOiB7IGlkOiBudW1iZXI7IHdvcmQ6IHN0cmluZzsgZGVmaW5pdGlvbjogc3RyaW5nW10gfVtdO1xufVxuXG5jb25zdCBpbml0V29yZFN0YXRlID0ge1xuICB3b3JkczogW1xuICAgIHtcbiAgICAgIGlkOiAxLFxuICAgICAgd29yZDogJ2ZhbGxvaXInLFxuICAgICAgZGVmaW5pdGlvbjogWyd0byBuZWVkJywgJ2hhdmUgdG8nXSxcbiAgICB9LFxuICAgIHtcbiAgICAgIGlkOiAyLFxuICAgICAgd29yZDogJ3ZhbG9pcicsXG4gICAgICBkZWZpbml0aW9uOiBbJ2JlIHdvcnRoJ10sXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogMyxcbiAgICAgIHdvcmQ6ICdmYWlyZScsXG4gICAgICBkZWZpbml0aW9uOiBbJ3RvIGRvJywgJ3RvIG1ha2UnXSxcbiAgICB9LFxuICBdLFxufTtcblxuY29uc3QgY3JlYXRlV29yZExpc3QgPSAoXG4gIGRpY3Q6IHtcbiAgICBpZDogbnVtYmVyO1xuICAgIHdvcmQ6IHN0cmluZztcbiAgICBkZWZpbml0aW9uOiBzdHJpbmdbXTtcbiAgfVtdLFxuKSA9PiB7XG4gIGNvbnN0IHJlcyA9IFtdO1xuXG4gIGxldCBsID0gNjU7XG4gIGxldCBfdyA9IDA7XG4gIHdoaWxlIChsIDwgNjUgKyAyNiAvKiAmJiBfdyA8IGRpY3QubGVuZ3RoKi8pIHtcbiAgICBjb25zdCBsZXR0ZXIgPSBTdHJpbmcuZnJvbUNoYXJDb2RlKGwpO1xuICAgIGxldCB3ID0gX3c7XG4gICAgLy8gaW5zZXJ0IGhlYWRpbmcgbGV0dGVyXG4gICAgcmVzLnB1c2goPEhlYWRpbmcga2V5PXtsfT57bGV0dGVyfTwvSGVhZGluZz4pO1xuXG4gICAgY29uc3QgbGlzdCA9IFtdO1xuICAgIGxldCBrZXkgPSAxO1xuICAgIHdoaWxlICh3IDwgZGljdC5sZW5ndGggJiYgZGljdFt3XS53b3JkWzBdLnRvVXBwZXJDYXNlKCkgPT0gbGV0dGVyKSB7XG4gICAgICBsaXN0LnB1c2goXG4gICAgICAgIDxsaSBrZXk9e2tleX0+XG4gICAgICAgICAge3VuZXNjYXBlKGRpY3Rbd10ud29yZCl9XG4gICAgICAgICAgPGRpdiBrZXk9e2tleSsrfSBzdHlsZT17eyBtYXJnaW5MZWZ0OiAnMXJlbScsIGZvbnRTaXplOiAnMC44cmVtJyB9fT5cbiAgICAgICAgICAgIHtkaWN0W3crK10uZGVmaW5pdGlvbi5qb2luKCcsICcpfVxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2xpPixcbiAgICAgICk7XG4gICAgfVxuICAgIHJlcy5wdXNoKDx1bD57bGlzdH08L3VsPik7XG4gICAgX3cgPSB3O1xuICAgIGwrKztcbiAgfVxuICBfdyA9IDA7XG4gIHJldHVybiByZXM7XG59O1xuXG5jb25zdCBIZWFkaW5nOiBSZWFjdC5GQzxQcm9wcz4gPSBwcm9wcyA9PiAoXG4gIDxwPlxuICAgIHtwcm9wcy5jaGlsZHJlbn1cbiAgICA8c3R5bGUganN4PntgXG4gICAgICBwIHtcbiAgICAgICAgZm9udC1zaXplOiAxLjVyZW07XG4gICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICB9XG4gICAgYH08L3N0eWxlPlxuICA8L3A+XG4pO1xuXG5jbGFzcyBWb2NhYiBleHRlbmRzIFJlYWN0LlB1cmVDb21wb25lbnQ8e30sIFdvcmRTdGF0ZT4ge1xuICBzdGF0ZTogV29yZFN0YXRlID0gaW5pdFdvcmRTdGF0ZTtcblxuICBmZXRjaFdvcmRzKCkge1xuICAgIGZldGNoKCdodHRwOi8vbG9jYWxob3N0OjMwMDEvdm9jYWI/X3NvcnQ9d29yZCZvcmRlcj1hc2MnKVxuICAgICAgLnRoZW4ocmVzID0+IHJlcy5qc29uKCkpXG4gICAgICAudGhlbihqc29uID0+IHtcbiAgICAgICAgdGhpcy5zZXRTdGF0ZSh7IHdvcmRzOiBqc29uIH0pO1xuICAgICAgfSk7XG4gIH1cblxuICBjb21wb25lbnREaWRNb3VudCgpIHtcbiAgICB0aGlzLmZldGNoV29yZHMoKTsgLy8gdXBkYXRlIHN0YXRlXG4gIH1cblxuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxMYXlvdXQ+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+e2NyZWF0ZVdvcmRMaXN0KHRoaXMuc3RhdGUud29yZHMpfTwvZGl2PlxuICAgICAgICB7LyogVE9ETyBtb3ZlIGNyZWF0ZVdvcmRMaXN0IHRvIGNvbXBvbmVudGRpZG1vdXRuICovfVxuICAgICAgICB7LyogPGRpdj57Y3JlYXRlV29yZExpc3QodGhpcy5zdGF0ZS53b3Jkcy5tYXAoaXRlbSA9PiBpdGVtLndvcmQpKX08L2Rpdj4gKi99XG4gICAgICAgIHsvKiB7Wy4uLkFycmF5KDI2KV0ubWFwKChfLCBpKSA9PiAoXG4gICAgICAgICAgPEhlYWRpbmcga2V5PXtpfT57U3RyaW5nLmZyb21DaGFyQ29kZSg2NSArIGkpfTwvSGVhZGluZz5cbiAgICAgICAgKSl9ICovfVxuICAgICAgPC9MYXlvdXQ+XG4gICAgKTtcbiAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBWb2NhYjtcbiJdfQ== */\n/*@ sourceURL=/Users/kashi-lab/github/tangochou/pages/vocab.tsx */"));
+}, __jsx("dl", {
+  className: "jsx-2396091119",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 55
+  },
+  __self: undefined
+}, __jsx("dt", {
+  className: "jsx-2396091119",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 56
+  },
+  __self: undefined
+}, "title"), __jsx("dd", {
+  className: "jsx-2396091119",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 57
+  },
+  __self: undefined
+}, __jsx(_components_InputText__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 58
+  },
+  __self: undefined
+})), __jsx("dt", {
+  className: "jsx-2396091119",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 60
+  },
+  __self: undefined
+}, "description"), __jsx("dd", {
+  className: "jsx-2396091119",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 61
+  },
+  __self: undefined
+}, __jsx(_components_InputText__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 62
+  },
+  __self: undefined
+}))), __jsx("textarea", {
+  className: "jsx-2396091119",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 65
+  },
+  __self: undefined
+}), __jsx(_components_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  clickhandler: getText,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 66
+  },
+  __self: undefined
+}, "add text"), __jsx("span", {
+  id: "db-res",
+  className: "jsx-2396091119",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 67
+  },
+  __self: undefined
+})), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  id: "2396091119",
+  __self: undefined
+}, "dl.jsx-2396091119{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 0 1rem;}dt.jsx-2396091119{width:25%;}dd.jsx-2396091119{width:75%;margin-left:0;}textarea.jsx-2396091119{height:10rem;width:100%;}.db-res.jsx-2396091119{margin-left:3rem;font-size:0.5rem;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rYXNoaS1sYWIvZ2l0aHViL3RhbmdvY2hvdS9wYWdlcy9hZGQtdGV4dC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBb0VnQixBQUdzQixBQVdILEFBR0EsQUFJRyxBQUlJLFVBVm5CLEFBR2dCLEdBSUgsSUFJTSxPQVBuQixBQUlBLFVBSUEsd0NBdkJpQix5REFDQyxnQkFDbEIiLCJmaWxlIjoiL1VzZXJzL2thc2hpLWxhYi9naXRodWIvdGFuZ29jaG91L3BhZ2VzL2FkZC10ZXh0LnRzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCBMYXlvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9MYXlvdXQnO1xuaW1wb3J0IElucHV0VGV4dCBmcm9tICcuLi9jb21wb25lbnRzL0lucHV0VGV4dCc7XG5pbXBvcnQgQnV0dG9uIGZyb20gJy4uL2NvbXBvbmVudHMvQnV0dG9uJztcbmltcG9ydCB7IGVzY2FwZSB9IGZyb20gJy4uL3V0aWxzL3N0clV0aWxzJztcblxuY29uc3QgaGFuZGxlV29yZENsaWNrID0gKGV2ZW50OiBSZWFjdC5Nb3VzZUV2ZW50KSA9PlxuICBjb25zb2xlLmxvZygoZXZlbnQudGFyZ2V0IGFzIEhUTUxTcGFuRWxlbWVudCkuaW5uZXJIVE1MKTtcblxuY29uc3QgZ2V0VGV4dCA9IChldmVudDogUmVhY3QuTW91c2VFdmVudCkgPT4ge1xuICBldmVudC5wcmV2ZW50RGVmYXVsdCgpO1xuICBjb25zdCB0aXRsZSA9IChkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnaW5wdXQnKVswXSBhcyBIVE1MSW5wdXRFbGVtZW50KVxuICAgIC52YWx1ZTtcbiAgY29uc3QgZGVzYyA9IChkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnaW5wdXQnKVsxXSBhcyBIVE1MSW5wdXRFbGVtZW50KVxuICAgIC52YWx1ZTtcbiAgbGV0IHRleHQgPSAoZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoXG4gICAgJ3RleHRhcmVhJyxcbiAgKVswXSBhcyBIVE1MVGV4dEFyZWFFbGVtZW50KS52YWx1ZTtcblxuICAvLyBlc2NhcGUgY2hhcnNcbiAgdGV4dCA9IGVzY2FwZSh0ZXh0KTtcblxuICAvLyBhZGQgdG8gZGF0YWJhc2VcbiAgZmV0Y2goJ2h0dHA6Ly9sb2NhbGhvc3Q6MzAwMS90ZXh0cycsIHtcbiAgICBtZXRob2Q6ICdQT1NUJyxcbiAgICBoZWFkZXJzOiB7IEFjY2VwdDogJ2FwcGxpY2F0aW9uL2pzb24nLCAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nIH0sXG4gICAgYm9keTogSlNPTi5zdHJpbmdpZnkoe1xuICAgICAgdGl0bGU6IHRpdGxlLFxuICAgICAgZGVzYzogZGVzYyxcbiAgICAgIHRleHQ6IHRleHQsXG4gICAgICB3b3JkbGlzdDogW10sXG4gICAgfSksXG4gIH0pLnRoZW4oKCkgPT4ge1xuICAgIChkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcbiAgICAgICdkYi1yZXMnLFxuICAgICkgYXMgSFRNTFNwYW5FbGVtZW50KS5pbm5lclRleHQgPSBgYWRkZWQgJHt0aXRsZX0gdG8gREJgO1xuICB9KTtcblxuICBjb25zdCByZXMgPSB7IHRpdGxlOiB0aXRsZSwgZGVzYzogZGVzYywgdGV4dDogdGV4dCB9O1xuICBjb25zdCB0ZXh0QXJyYXkgPSB0ZXh0LnNwbGl0KCcgJyk7XG59O1xuXG4vLyBjb25zdCB2ZG9tcyA9IFsndGhlJywgJ3F1aWNrJywgJ2Jyb3duJywgJ2ZveCddLm1hcCgodywgaSkgPT4gKFxuLy8gICA8c3BhbiBrZXk9e2l9IG9uQ2xpY2s9e2hhbmRsZVdvcmRDbGlja30+XG4vLyAgICAge3d9XG4vLyAgIDwvc3Bhbj5cbi8vICkpO1xuY29uc3QgQWRkVGV4dCA9ICgpID0+IChcbiAgPExheW91dD5cbiAgICB7LyogPHNwYW4gb25DbGljaz17ZXZlbnQgPT4gY29uc29sZS5sb2coZXZlbnQuY3VycmVudFRhcmdldC50ZXh0Q29udGVudCl9PlxuICAgICAgY2xpY2sgbWVcbiAgICA8L3NwYW4+ICovfVxuICAgIHsvKiB7dmRvbXN9ICovfVxuICAgIDxkaXY+XG4gICAgICA8ZGw+XG4gICAgICAgIDxkdD50aXRsZTwvZHQ+XG4gICAgICAgIDxkZD5cbiAgICAgICAgICA8SW5wdXRUZXh0IC8+XG4gICAgICAgIDwvZGQ+XG4gICAgICAgIDxkdD5kZXNjcmlwdGlvbjwvZHQ+XG4gICAgICAgIDxkZD5cbiAgICAgICAgICA8SW5wdXRUZXh0IC8+XG4gICAgICAgIDwvZGQ+XG4gICAgICA8L2RsPlxuICAgICAgPHRleHRhcmVhIC8+XG4gICAgICA8QnV0dG9uIGNsaWNraGFuZGxlcj17Z2V0VGV4dH0+YWRkIHRleHQ8L0J1dHRvbj5cbiAgICAgIDxzcGFuIGlkPVwiZGItcmVzXCI+PC9zcGFuPlxuICAgIDwvZGl2PlxuICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgIGRsIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgZmxleC13cmFwOiB3cmFwO1xuICAgICAgICBtYXJnaW46IDAgMCAxcmVtO1xuICAgICAgfVxuICAgICAgLypcbiAgICAgIGR0LFxuICAgICAgZGQge1xuICAgICAgICBkaXNwbGF5OiBpbmxpbmU7XG4gICAgICB9XG4gICAgICAqL1xuICAgICAgZHQge1xuICAgICAgICB3aWR0aDogMjUlO1xuICAgICAgfVxuICAgICAgZGQge1xuICAgICAgICB3aWR0aDogNzUlO1xuICAgICAgICBtYXJnaW4tbGVmdDogMDtcbiAgICAgIH1cbiAgICAgIHRleHRhcmVhIHtcbiAgICAgICAgaGVpZ2h0OiAxMHJlbTtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICB9XG4gICAgICAuZGItcmVzIHtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDNyZW07XG4gICAgICAgIGZvbnQtc2l6ZTogMC41cmVtO1xuICAgICAgfVxuICAgIGB9PC9zdHlsZT5cbiAgPC9MYXlvdXQ+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBBZGRUZXh0O1xuIl19 */\n/*@ sourceURL=/Users/kashi-lab/github/tangochou/pages/add-text.tsx */"));
 
-class Vocab extends react__WEBPACK_IMPORTED_MODULE_2__["PureComponent"] {
-  constructor(...args) {
-    super(...args);
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "state", initWordState);
-  }
-
-  fetchWords() {
-    fetch('http://localhost:3001/vocab?_sort=word&order=asc').then(res => res.json()).then(json => {
-      this.setState({
-        words: json
-      });
-    });
-  }
-
-  componentDidMount() {
-    this.fetchWords(); // update state
-  }
-
-  render() {
-    return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 100
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "container",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 101
-      },
-      __self: this
-    }, createWordList(this.state.words)));
-  }
-
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Vocab);
+/* harmony default export */ __webpack_exports__["default"] = (AddText);
 
 /***/ }),
 
@@ -1226,15 +1319,26 @@ const unescape = str => str.replace(/&apos;/g, "'").replace(/&lt;/g, '<').replac
 
 /***/ }),
 
-/***/ 6:
-/*!*******************************!*\
-  !*** multi ./pages/vocab.tsx ***!
-  \*******************************/
+/***/ 7:
+/*!**********************************!*\
+  !*** multi ./pages/add-text.tsx ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/kashi-lab/github/tangochou/pages/vocab.tsx */"./pages/vocab.tsx");
+module.exports = __webpack_require__(/*! /Users/kashi-lab/github/tangochou/pages/add-text.tsx */"./pages/add-text.tsx");
 
+
+/***/ }),
+
+/***/ "core-js/library/fn/json/stringify":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/json/stringify" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/json/stringify");
 
 /***/ }),
 
@@ -1393,4 +1497,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=vocab.js.map
+//# sourceMappingURL=add-text.js.map

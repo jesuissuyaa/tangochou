@@ -9,8 +9,10 @@ export default ({ query: { word } }, res) => {
       uri: `https://www.collinsdictionary.com/dictionary/french-english/${encodeAccents(
         word,
       )}`,
+      followAllRedirects: true,
     },
     (err, response, body) => {
+      console.log(response.request.href);
       if (err) {
         console.error(err);
         res.status(500);
