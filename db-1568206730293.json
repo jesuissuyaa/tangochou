@@ -1,0 +1,66 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "body": "進捗を生む"
+    },
+    {
+      "id": 2,
+      "body": "とにかくやる"
+    }
+  ],
+  "words": [
+    {
+      "id": 1,
+      "word": "falloir"
+    },
+    {
+      "id": 2,
+      "word": "valoir"
+    },
+    {
+      "id": 3,
+      "word": "semaine"
+    },
+    {
+      "id": 4,
+      "word": "pendule"
+    },
+    {
+      "id": 5,
+      "word": "laid"
+    },
+    {
+      "id": 6,
+      "word": "peser"
+    },
+    {
+      "word": "l'élan",
+      "id": 7
+    },
+    {
+      "word": "boiteux",
+      "id": 8
+    }
+  ],
+  "texts": [
+    {
+      "id": 1,
+      "title": "dummy title",
+      "desc": "dummy desc",
+      "text": "dummy dummy dummy "
+    },
+    {
+      "title": "new title",
+      "desc": "some description",
+      "text": "c&amp;apos;est le premier text que j&amp;apos;envoie",
+      "id": 2
+    },
+    {
+      "title": "はろー",
+      "desc": "ばいばい",
+      "text": "ぼんじゅーる",
+      "id": 3
+    }
+  ]
+}

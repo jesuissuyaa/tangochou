@@ -1,0 +1,34 @@
+import request from 'request';
+import cheerio from 'cheerio';
+import { encodeAccents } from '../../../utils/strUtils';
+
+export default ({ query: { word } }, res) => {
+  request(
+    {
+      uri: `https://www.linguee.fr/francais-anglais/search?source=auto&query=${encodeAccents(
+        word,
+      )}`,
+      encoding: 'latin1',
+    },
+    (err, response, body) => {
+      if (err) {
+        console.error(err);
+        res.status(500);
+        res.end('server error');
+      }
+
+      // decode string
+      const $ = cheerio.load(body);
+      console.log(body);
+      const defList = [];
+      $($('.translation_lines')[0])
+        .find('.dictLink')
+        .each((index, element) => {
+          defList.push($(element).text());
+        });
+      // trim definition list to 5 elements max
+      res.status(200).json(defList);
+    },
+  );
+  // res.status(200).json({ message: `you requested for ${word} ` });
+};
