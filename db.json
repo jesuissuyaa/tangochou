@@ -9,91 +9,74 @@
       "body": "とにかくやる"
     }
   ],
-  "vocab-temp" : [
+  "vocab-temp": [
     {
-      "id" : 1, 
-      "word" : "avion",
-      "definition": ["airplane", "craft", "aircraft"]
-    }, 
-    {
-      "id" : 2,
-      "word" : "brume",
-      "definition" : ["mist", "fog"]
+      "id": 1,
+      "word": "avion",
+      "definition": [
+        "airplane",
+        "craft",
+        "aircraft"
+      ]
     },
     {
-      "id" : 3,
-      "word" : "zulu",
-      "definition" : ["zulu"]
+      "id": 2,
+      "word": "brume",
+      "definition": [
+        "mist",
+        "fog"
+      ]
+    },
+    {
+      "id": 3,
+      "word": "zulu",
+      "definition": [
+        "zulu"
+      ]
     }
   ],
   "vocab": [
     {
       "id": 1,
-      "word": "falloir"
+      "word": "aimer",
+      "definition": [
+        "to love",
+        "to like"
+      ]
     },
     {
-      "id": 2,
-      "word": "valoir"
-    },
-    {
-      "id": 4,
-      "word": "pendule"
-    },
-    {
-      "id": 5,
-      "word": "laid"
-    },
-    {
-      "id": 6,
-      "word": "peser"
-    },
-    {
-      "word": "l'élan",
-      "id": 7
-    },
-    {
-      "word": "boiteux",
-      "id": 8
-    },
-    {
-      "word": "text",
-      "id": 9
-    },
-    {
-      "word": "c&apos;est",
-      "id": 15
+      "word": "cité",
+      "definition": [
+        "city",
+        "town",
+        "housing project"
+      ],
+      "id": 2
     },
     {
       "word": "premier",
-      "id": 16
-    },
-    {
-      "word": "avion",
-      "id": 18
-    },
-    {
-      "word": "les",
-      "id": 19
-    },
-    {
-      "word": "mode",
-      "id": 21
-    },
-    {
-      "word": "courants",
-      "id": 22
-    },
-    {
-      "word": "rejoindre",
-      "id": 23
-    },
-    {
-      "word": "dummy",
-      "id": 24
-    },
-    {
-      "word": "monde",
-      "id": 25
+      "definition": [
+        "first",
+        "prime",
+        "primary",
+        "initial",
+        "main",
+        "principal",
+        "preliminary",
+        "premier",
+        "original",
+        "leading",
+        "early",
+        "former",
+        "earliest",
+        "foremost",
+        "head",
+        "overriding",
+        "uppermost",
+        "primal",
+        "debut"
+      ],
+      "id": 3
     }
   ],
   "texts": [
@@ -111,11 +94,6 @@
       "desc": "some description",
       "title": "new title",
       "wordlist": [
-        "j&apos;envoie",
-        "c&amp;apos;est",
-        "c&amp;apos;est",
-        "c&apos;est",
-        "click on a word :)",
         "premier"
       ],
       "id": 2
@@ -124,13 +102,7 @@
       "text": "Soren Canto, en mode avion ou bien ? Et bien non, puisqu&apos;il sera en concert le mercredi 18 septembre, à Rennes. Une belle invitation à le rejoindre sur son île :)\n\nÀ noter également, dans son actualité, la sortie de son 1er Ep En mode avion en novembre prochain.\n\nLe monde est en mode avion \ny’a du brouillard sur les pistes \ndes couloirs, des courants d’air \ndis-moi pourquoi on insiste... Soren Canto",
       "desc": "https://www.franceculture.fr/emissions/les-carnets-de-la-creation/les-carnets-de-la-creation-du-mardi-10-septembre-2019",
       "title": "Soren Canto",
-      "wordlist": [
-        "mode",
-        "courants",
-        "courants",
-        "rejoindre",
-        "monde"
-      ],
+      "wordlist": [],
       "id": 4
     },
     {
@@ -138,9 +110,17 @@
       "desc": "https://www.franceculture.fr/emissions/les-pieds-sur-terre/ca-sest-passe-a-lourdes",
       "title": "Ça s'est passé à Lourdes",
       "wordlist": [
-        "les"
+        "est-elle",
+        "cité"
       ],
       "id": 5
+    },
+    {
+      "text": "Pour éviter l&apos;utilisation automatique et abusive des données de Linguee par un autre programme, le nombre de requêtes par utilisateur est limité.\nSi vous autorisez Javascript, il vous sera possible d&apos;effectuer davantage de requêtes. Pour ce faire, paramétrez votre navigateur afin d&apos;activer Javascript, puis patientez une heure avant d&apos;utiliser Linguee de nouveau.\nSi votre ordinateur est connecté via à un réseau au sein duquel de nombreux utilisateurs sont susceptibles d&apos;utiliser simultanément Linguee, veuillez nous contacter.",
+      "desc": "too much access",
+      "title": "linguee",
+      "wordlist": [],
+      "id": 6
     }
   ]
 }

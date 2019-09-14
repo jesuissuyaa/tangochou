@@ -142,11 +142,13 @@ class Text extends React.PureComponent<{}, State> {
           <div className="button-container">
             <Button
               clickhandler={e => {
-                addWord(
-                  (document.getElementsByClassName('word')[0] as HTMLDivElement)
-                    .innerText,
-                  this.state.id,
-                );
+                // addWord(
+                //   (document.getElementsByClassName('word')[0] as HTMLDivElement)
+                //     .innerText,
+                //   (document.getElementsByClassName('word')[0] as HTMLDivElement)
+                //     .innerText,
+                //   this.state.id,
+                // );
                 console.log('add word');
               }}
             >
@@ -154,11 +156,11 @@ class Text extends React.PureComponent<{}, State> {
             </Button>
             <Button
               clickhandler={e => {
-                deleteWord(
-                  (document.getElementsByClassName('word')[0] as HTMLDivElement)
-                    .innerText,
-                  this.state.id,
-                );
+                // deleteWord(
+                //   (document.getElementsByClassName('word')[0] as HTMLDivElement)
+                //     .innerText,
+                //   this.state.id,
+                // );
               }}
             >
               remove from vocab

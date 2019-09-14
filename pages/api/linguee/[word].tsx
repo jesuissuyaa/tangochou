@@ -3,6 +3,7 @@ import cheerio from 'cheerio';
 import { encodeAccents } from '../../../utils/strUtils';
 
 export default ({ query: { word } }, res) => {
+  // request to linguee
   request(
     {
       uri: `https://www.linguee.fr/francais-anglais/search?source=auto&query=${encodeAccents(
@@ -19,16 +20,15 @@ export default ({ query: { word } }, res) => {
 
       // decode string
       const $ = cheerio.load(body);
-      console.log(body);
       const defList = [];
       $($('.translation_lines')[0])
         .find('.dictLink')
         .each((index, element) => {
           defList.push($(element).text());
         });
-      // trim definition list to 5 elements max
+
+      // send response
       res.status(200).json(defList);
     },
   );
-  // res.status(200).json({ message: `you requested for ${word} ` });
 };

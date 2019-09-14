@@ -10,22 +10,28 @@ export const getWords = () => {
     });
 };
 export async function addWord(
-  word: string,
-  textId: number /*, defs: string[] */,
+  tWord: string,
+  vWord: string,
+  textId: number,
+  defs: string[],
 ) {
-  word = escape(word);
+  tWord = escape(tWord);
+  vWord = escape(vWord);
   const vRes = await fetch('http://localhost:3001/vocab');
   const vData = await vRes.json();
   const vocab = vData.map(item => item.word);
   // add to vocab
-  if (!vocab.includes(word.toLowerCase())) {
+  if (!vocab.includes(vWord)) {
     fetch('http://localhost:3001/vocab', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ word: word.toLowerCase() }),
+      body: JSON.stringify({
+        word: vWord.toLowerCase(),
+        definition: defs,
+      }),
     }).then(getWords);
   }
   // add to word list (for text)
@@ -33,7 +39,7 @@ export async function addWord(
   let tData = await tRes.json();
   tData = tData[0];
   const wordList = tData.wordlist;
-  wordList.push(word);
+  wordList.push(tWord);
   console.log(wordList);
   tRes = await fetch(`http://localhost:3001/texts/${textId}`, {
     method: 'PUT',
@@ -58,12 +64,11 @@ export async function getTextTitles() {
   return <>{elements}</>;
 }
 
-export async function deleteWord(word: string, textId: number) {
-  word = escape(word);
+export async function deleteWord(tWord: string, vWord: string, textId: number) {
+  tWord = escape(tWord);
+  vWord = escape(vWord);
   // remove from vocab
-  const vRes = await fetch(
-    `http://localhost:3001/vocab?word=${word.toLowerCase()}`,
-  );
+  const vRes = await fetch(`http://localhost:3001/vocab?word=${vWord}`);
   const vData = await vRes.json();
   if (vData.length) {
     const vId = vData[0].id;
@@ -81,7 +86,7 @@ export async function deleteWord(word: string, textId: number) {
   let tData = await tRes.json();
   tData = tData[0];
   const wordList = tData.wordlist;
-  const i = wordList.indexOf(word);
+  const i = wordList.indexOf(tWord);
   console.log(wordList);
   if (i > -1) wordList.splice(i, 1);
   console.log(wordList);

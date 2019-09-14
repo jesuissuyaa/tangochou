@@ -41,7 +41,7 @@ const createWordList = (
 
   let l = 65;
   let _w = 0;
-  while (l < 65 + 26 /*&& _w < dict.length*/) {
+  while (l < 65 + 26 /* && _w < dict.length*/) {
     const letter = String.fromCharCode(l);
     let w = _w;
     // insert heading letter
@@ -84,7 +84,7 @@ class Vocab extends React.PureComponent<{}, WordState> {
   state: WordState = initWordState;
 
   fetchWords() {
-    fetch('http://localhost:3001/vocab-temp?_sort=word&order=asc')
+    fetch('http://localhost:3001/vocab?_sort=word&order=asc')
       .then(res => res.json())
       .then(json => {
         this.setState({ words: json });

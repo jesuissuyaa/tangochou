@@ -19,11 +19,22 @@ interface Props {
 }
 
 interface State {
-  sWordList: string[];
+  wordInText: string;
+  wordInVocab: string;
+  defs: string[];
 }
+
 const initialState = {
-  sWordList: [],
+  wordInText: '',
+  wordInVocab: '',
+  defs: [],
 };
+// interface State {
+//   sWordList: string[];
+// }
+// const initialState = {
+//   sWordList: [],
+// };
 
 const linkStyle: React.CSSProperties = {
   color: 'white',
@@ -32,74 +43,7 @@ const linkStyle: React.CSSProperties = {
   textDecoration: 'none',
 };
 
-const handleWordClick = async (event: React.MouseEvent) => {
-  const word = (event.target as HTMLSpanElement).innerHTML;
-  const container = document.getElementsByClassName('def')[0];
-  // show loading
-  // const loader = <Loader type="pacman" active />;
-  // const loader = <div className={scss.pacman}></div>;
-  const loader = <img src="/static/loader.gif" style={{ width: '3rem' }} />;
-  ReactDOM.render(loader, container);
-  // remove commas and periods
-  let qword = strip(word);
-  // split string if concatenated
-  if (word.includes("'")) qword = word.split("'")[1];
-  // show link to Linguee
-  const url = `https://www.linguee.fr/francais-anglais/search?source=auto&query=${qword}`;
-  const link = (
-    <a href={url} style={linkStyle} target="_blank">
-      {url}
-    </a>
-  );
-  (document.getElementsByClassName(
-    'word',
-  )[0] as HTMLDivElement).innerText = qword;
-  ReactDOM.render(link, document.getElementsByClassName('def-link')[0]);
-
-  // get definitions from Linguee
-  const response = await fetch(`http://localhost:3000/api/linguee/${qword}`);
-  const data = await response.json();
-  console.log(data);
-  // display definitions
-  const spanStyle: React.CSSProperties = { marginRight: '1rem' };
-
-  let elements;
-  if (data.length) {
-    elements = data.map((item, index) => (
-      <span key={index} style={spanStyle}>
-        {item}
-      </span>
-    ));
-  } else {
-    elements = <i>no definition found :(</i>;
-  }
-
-  ReactDOM.render(elements, container);
-};
-
-const textWithTags = (text: string, wordlist: string[]) => (
-  <>
-    {text.split(' ').map((word, index) => (
-      <>
-        <span
-          key={index}
-          className={wordlist.includes(word) ? 'highlight' : ''}
-          onClick={handleWordClick}
-        >
-          {unescape(word)}
-        </span>
-        &nbsp;
-      </>
-    ))}
-    <style jsx>{`
-      .highlight {
-        background-color: #a17da1;
-        color: white;
-        padding: 0 0.3rem;
-      }
-    `}</style>
-  </>
-);
+// span clicked -> show definition
 
 class Text extends React.Component<Props, State> {
   state: State = initialState;
@@ -119,6 +63,99 @@ class Text extends React.Component<Props, State> {
     };
   }
 
+  cleanString = (str: string) => {
+    // remove commas and periods
+    str = strip(str);
+    // split string if concatenated
+    if (str.includes('’')) {
+      str = str.split('’')[1];
+    } else if (this.state.wordInVocab.includes("'")) {
+      str = str.split("'")[1];
+    }
+    // lowercase
+    console.log(str);
+    return str.toLowerCase();
+  };
+  handleWordClick = async (event: React.MouseEvent) => {
+    // show loading
+    const loader = <img src="/static/loader.gif" style={{ width: '3rem' }} />;
+    const container = document.getElementsByClassName('def')[0];
+    ReactDOM.render(loader, container);
+
+    // clean string
+    this.state.wordInText = (event.target as HTMLSpanElement).innerHTML;
+    this.state.wordInVocab = this.cleanString(this.state.wordInText);
+    // show link to Linguee
+    const url = `https://www.linguee.fr/francais-anglais/search?source=auto&query=${this.state.wordInVocab}`;
+    const link = (
+      <a href={url} style={linkStyle} target="_blank">
+        {url}
+      </a>
+    );
+    (document.getElementsByClassName(
+      'word',
+    )[0] as HTMLDivElement).innerText = this.state.wordInVocab;
+    ReactDOM.render(link, document.getElementsByClassName('def-link')[0]);
+
+    // get definitions from Linguee
+    let response = await fetch(
+      `http://localhost:3000/api/linguee/${this.state.wordInVocab}`,
+    );
+    let data = await response.json();
+    if (!data.length) {
+      console.log('trying collins...');
+      // linguee timed out
+      // get definitions from collitions
+      response = await fetch(
+        `http://localhost:3000/api/collins/${this.state.wordInVocab}`,
+      );
+      data = await response.json();
+      //console.log(data);
+    }
+    // display definitions
+    const spanStyle: React.CSSProperties = { marginRight: '1rem' };
+
+    let elements;
+    if (data.length) {
+      // copy to state
+      this.state.defs = data;
+      elements = data.map((item, index) => (
+        <span key={index} style={spanStyle}>
+          {item}
+        </span>
+      ));
+    } else {
+      elements = <i>no definition found :(</i>;
+    }
+    console.log(this.state.defs);
+
+    ReactDOM.render(elements, container);
+  };
+
+  textWithTags = (text: string, wordlist: string[]) => (
+    <>
+      {text.split(' ').map((word, index) => (
+        <>
+          <span
+            key={index}
+            className={wordlist.includes(word) ? 'highlight' : ''}
+            onClick={this.handleWordClick}
+          >
+            {unescape(word)}
+          </span>
+          &nbsp;
+        </>
+      ))}
+      <style jsx>{`
+        .highlight {
+          background-color: #a17da1;
+          color: white;
+          padding: 0 0.3rem;
+        }
+      `}</style>
+    </>
+  );
+
   render() {
     return (
       <Layout>
@@ -132,12 +169,10 @@ class Text extends React.Component<Props, State> {
             <Button
               clickhandler={e => {
                 addWord(
-                  (document.getElementsByClassName('word')[0] as HTMLDivElement)
-                    .innerText,
+                  this.state.wordInText,
+                  this.state.wordInVocab,
                   this.props.id,
-                  /*
-                  Array.from(document.getElementsByClassName('def')[0].childNodes, x => x.textContent)
-                  */
+                  this.state.defs,
                 ).then(() => location.reload());
               }}
             >
@@ -146,8 +181,8 @@ class Text extends React.Component<Props, State> {
             <Button
               clickhandler={e => {
                 deleteWord(
-                  (document.getElementsByClassName('word')[0] as HTMLDivElement)
-                    .innerText,
+                  this.state.wordInText,
+                  this.state.wordInVocab,
                   this.props.id,
                 ).then(() => location.reload());
               }}
@@ -160,7 +195,7 @@ class Text extends React.Component<Props, State> {
         <hr></hr>
         <h3>{this.props.title}</h3>
         <div className="text-container">
-          {textWithTags(this.props.text, this.props.wordlist)}
+          {this.textWithTags(this.props.text, this.props.wordlist)}
         </div>
         <style jsx>{`
           .button-container {

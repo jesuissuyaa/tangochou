@@ -5,7 +5,7 @@ the accent circonflexe â, ê, î, ô, û,
 the accent grave à, è, ù
 and the accent tréma ë, ï, ü.
 */
-export const encodeAccents = (str: string) =>
+export const encodeAccents: (str: string) => string = (str: string) =>
   str
     .toLowerCase()
     .replace(/ç/g, '%E7')
@@ -21,15 +21,16 @@ export const encodeAccents = (str: string) =>
     .replace(/ë/g, '%EB')
     .replace(/ï/g, '%EF')
     .replace(/ü/g, '%FC');
-export const escape = str =>
+export const escape: (str: string) => string = (str: string) =>
   str
     .replace(/&/g, '&amp;')
     .replace(/'/g, '&apos;')
     .replace(/</g, '&lt;')
     .replace(/</g, '&gt;')
     .replace(/"/g, '&quot;');
-export const strip = str => str.replace(/[,.]/g, '');
-export const unescape = str =>
+export const strip: (str: string) => string = (str: string) =>
+  str.replace(/[,.]/g, '');
+export const unescape: (str: string) => string = (str: string) =>
   str
     .replace(/&apos;/g, "'")
     .replace(/&lt;/g, '<')
