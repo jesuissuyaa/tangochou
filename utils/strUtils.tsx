@@ -21,6 +21,25 @@ export const encodeAccents: (str: string) => string = (str: string) =>
     .replace(/ë/g, '%EB')
     .replace(/ï/g, '%EF')
     .replace(/ü/g, '%FC');
+
+/* use to encode for collins */
+export const encodeAccentsUtf: (str: string) => string = (str: string) =>
+  str
+    .toLowerCase()
+    .replace(/ç/g, '%C3%A7')
+    .replace(/é/g, '%C3%A9')
+    .replace(/â/g, '%C3%A2')
+    .replace(/ê/g, '%C3%AA')
+    .replace(/î/g, '%C3%AE')
+    .replace(/ô/g, '%C3%B4')
+    .replace(/û/g, '%C3%BB')
+    .replace(/à/g, '%C3%A0')
+    .replace(/è/g, '%C3%A8')
+    .replace(/ù/g, '%C3%B9')
+    .replace(/ë/g, '%C3%AB')
+    .replace(/ï/g, '%C3%AF')
+    .replace(/ü/g, '%C3%BC');
+
 export const escape: (str: string) => string = (str: string) =>
   str
     .replace(/&/g, '&amp;')

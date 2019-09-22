@@ -1,12 +1,34 @@
 import request from 'request';
 import cheerio from 'cheerio';
-import { encodeAccents } from '../../../utils/strUtils';
+import { encodeAccentsUtf } from '../../../utils/strUtils';
+
+// take cheerio body -> scrape -> return list of defs for word
+const getDefList = ($: CheerioStatic) => {
+  const defList = [];
+  const defs = [];
+
+  $('.sense').each((index, elm) => {
+    const matches = $(elm)
+      .children('.type-translation')
+      .children(' .quote');
+    if (matches.length) {
+      matches.each((i, m) => defs.push($(m).text()));
+    }
+  });
+  const set = Array.from(new Set(defs));
+  set.forEach(item => defList.push(item));
+
+  return defList;
+};
 
 export default ({ query: { word } }, res) => {
   // request to collins dictionary
   request(
     {
-      uri: `https://www.collinsdictionary.com/dictionary/french-english/${encodeAccents(
+      // uri: `https://www.collinsdictionary.com/dictionary/french-english/${encodeAccents(
+      //   word,
+      // )}`,
+      uri: `https://www.collinsdictionary.com/dictionary/french-english/${encodeAccentsUtf(
         word,
       )}`,
       followAllRedirects: true,
@@ -25,7 +47,7 @@ export default ({ query: { word } }, res) => {
       if (seeAlso.length) {
         request(
           {
-            uri: `https://www.collinsdictionary.com/dictionary/french-english/${encodeAccents(
+            uri: `https://www.collinsdictionary.com/dictionary/french-english/${encodeAccentsUtf(
               seeAlso.text(),
             )}`,
           },
@@ -35,21 +57,19 @@ export default ({ query: { word } }, res) => {
               res.status(500);
               res.end('server error');
             }
+            console.log('following redirect...');
             // parse body
             $ = cheerio.load(body2);
-            const defList = [];
-            $('.sense > .type-translation > .quote').each((index, element) => {
-              defList.push($(element).text());
-            });
-            res.status(200).json(defList);
+
+            res.status(200).json(getDefList($));
           },
         );
       } else {
-        const defList = [];
-        $('.sense .type-translation > .quote').each((index, element) => {
-          defList.push($(element).text());
-        });
-        res.status(200).json(defList);
+        // $('.sense .type-translation > .quote').each((index, element) => {
+        //   defList.push($(element).text());
+        // });
+        if (!getDefList($).length) console.log($);
+        res.status(200).json(getDefList($));
       }
     },
   );

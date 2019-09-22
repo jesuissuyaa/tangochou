@@ -101,6 +101,7 @@ class Text extends React.Component<Props, State> {
       `http://localhost:3000/api/linguee/${this.state.wordInVocab}`,
     );
     let data = await response.json();
+    data = [];
     if (!data.length) {
       console.log('trying collins...');
       // linguee timed out
