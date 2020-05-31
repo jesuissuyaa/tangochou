@@ -21,8 +21,8 @@ npm run json-server --routes
 
 ## TODO
 
-[ ] 0921: retrieving definition takes too much time
-[ ] 0921: default dictionary skips linguee
+- [ ] 0921: retrieving definition takes too much time
+- [ ] 0921: default dictionary skips linguee
 
 - add text page
   - layout
@@ -35,5 +35,5 @@ npm run json-server --routes
 
 ## SOLVED ISSUES
 
-[x] collins -> redirect: needs url separate encoding from linguee; use utf-8 encoding
+- [x] collins -> redirect: needs url separate encoding from linguee; use utf-8 encoding
 
